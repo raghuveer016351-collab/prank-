@@ -42,7 +42,35 @@ Initializing...
 </div>
 
 <script>
+const terminal = document.getElementById("terminal");
 
+const lines = [
+"Initializing...",
+"",
+"Connecting to Secure Server...",
+"",
+"Access Granted ✔",
+"",
+"Finding WhatsApp...",
+"",
+"Scanning Gallery...",
+"",
+"Loading..."
+];
+
+let i = 0;
+
+function typeLine(){
+    if(i < lines.length){
+        terminal.innerHTML += lines[i] + "<br>";
+        terminal.scrollTop = terminal.scrollHeight;
+        i++;
+        setTimeout(typeLine, 900);
+    }
+}
+
+terminal.innerHTML = "";
+typeLine();
 </script>
 
 </body>
