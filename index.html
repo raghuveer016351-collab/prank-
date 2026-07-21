@@ -30,7 +30,23 @@ body{
     font-size:18px;
     line-height:1.8;
 }
+#terminal{
+    text-shadow:0 0 8px #00ff00;
+}
 
+.warning{
+    color:red;
+    font-size:25px;
+    animation:blink 0.5s infinite;
+}
+
+@keyframes blink{
+
+50%{
+opacity:0.3;
+}
+
+}
 </style>
 
 </head>
@@ -124,7 +140,7 @@ terminal.innerHTML += "Private Files Found...<br>";
 setTimeout(() => {
 
 terminal.innerHTML += 
-"<br><br>😂 OYE BHAI!! 😂<br><br>" +
+"<span class='warning'>😂 OYE BHAI!! 😂</span><br><br>" +
 "Relax... tera phone hack nahi hua 😆<br>" +
 "Ye sirf ek prank tha ❤️<br><br>" +
 "Mission Complete ✅";
