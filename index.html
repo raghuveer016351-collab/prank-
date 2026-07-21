@@ -71,6 +71,23 @@ function typeLine(){
 
 terminal.innerHTML = "";
 typeLine();
+setTimeout(() => {
+
+let progress = 0;
+
+const loader = setInterval(() => {
+
+progress += 5;
+
+terminal.innerHTML += "Loading: " + progress + "%<br>";
+
+if(progress >= 100){
+clearInterval(loader);
+}
+
+},200);
+
+},11000);
 </script>
 
 </body>
